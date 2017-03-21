@@ -12,7 +12,8 @@ var generateInformation = function () {
   var describe = describeInput.value
   var email = emailInput.value
   var phone = phoneInput.value
-  var element = '<h1>Hi, my name is ' + firstName + ' ' + lastName + '!</h1>' +
+  var profileContent =
+    '<h1>Hi, my name is ' + firstName + ' ' + lastName + '!</h1>' +
     '<p>' + describe + '</p>' +
     '<p>' +
     'If you\'re interested in a date, you can email me at ' +
@@ -21,25 +22,8 @@ var generateInformation = function () {
       '<a href="tel:' + phone + '" target="_blank">' + phone + '</a>.' +
     '</p>'
 
-  previewOutput.innerHTML = element
-  // '<h1>Hi, my name is ' + firstName + ' ' + lastName + '!</h1>' +
-  // '<p>' + describe + '</p>' +
-  // '<p>' +
-  // 'If you\'re interested in a date, you can email me at ' +
-  //   '<a href="mailto:' + email + '" target="_blank">' + email + '</a>' +
-  //   ' or give me a call at ' +
-  //   '<a href="tel:' + phone + '" target="_blank">' + phone + '</a>.' +
-  // '</p>'
-
-  rawProfileOutput.textContent = element
-  // '<h1>Hi, my name is ' + firstName + ' ' + lastName + '!</h1>' +
-  // '<p>' + describe + '</p>' +
-  // '<p>' +
-  // 'If you\'re interested in a date, you can email me at ' +
-  //   '<a href="mailto:' + email + '" target="_blank">' + email + '</a>' +
-  //   ' or give me a call at ' +
-  //   '<a href="tel:' + phone + '" target="_blank">' + phone + '</a>.' +
-  // '</p>'
+  previewOutput.innerHTML = profileContent
+  rawProfileOutput.textContent = profileContent
 }
 
 firstNameInput.addEventListener('input', generateInformation)
